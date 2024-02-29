@@ -100,4 +100,48 @@ console.log(Math.min.apply(null,arr1));
 
 //Iteration Methods
 
+//for each
 
+let sum =0;
+
+function myFunc(value,index,arr){
+    sum += value;
+    return sum;
+}
+
+arr1.forEach(myFunc);
+
+//Map
+
+function oneLess(val){
+    return val -1;
+}
+
+arr1.map(oneLess);
+
+//Filter
+
+function existanceCheck(x){
+    if(x == 6){
+        return true;
+    }
+    else{return false;}
+}
+
+arr1.filter(existanceCheck);
+
+//Reduce
+
+function sumCalculate(x,y){
+    return x+y;
+}
+
+console.log("Reduced val : "+arr1.reduce(sumCalculate ));
+
+//reduce can also have an initial argument to start with
+
+console.log("Reduced val : "+arr1.reduce(sumCalculate , 199));
+
+//--the end
+
+//JAZAKALLAH

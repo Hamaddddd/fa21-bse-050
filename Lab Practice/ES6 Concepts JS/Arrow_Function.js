@@ -22,3 +22,47 @@ console.log(newFunc());
 // var a;
 
 
+let numbs = [1,2,3,4,5,6,7];
+
+
+//map through arrow func --get squared
+const squareIt = x => x**2;
+
+let squareIt2 = x => x**2;
+
+let sq_arr = numbs.map(squareIt);
+
+console.log("Squared numbers: "+sq_arr);
+
+//filter --get even only
+const onlyEven = x => {
+    if(x%2 ==0){
+        return x;
+    }
+    else return false
+};
+
+let onlyEven2= x => {
+    if(x%2 ==0){
+        return x;
+    }
+    else return false
+};
+
+
+let evenArr = numbs.filter(onlyEven2);
+console.log(evenArr);
+
+//reduce --sum
+const sumIt = (x,y) => x+y;
+
+let sumIt2 = (x,y) => x+y;
+
+console.log("Sum is: "+numbs.reduce(sumIt2,1000));
+
+//reduce calculate mean
+var total,mean;
+const meanCalculate = x => {
+    total += x;
+    mean = total/numbs.length;
+};

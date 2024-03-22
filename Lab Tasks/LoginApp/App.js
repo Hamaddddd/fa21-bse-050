@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import React, { useState } from 'react';
 
-
+import chessBoard from './chessBoard/chessBoard';
 
 export default function App() {
 
@@ -11,6 +11,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+
+      
       <Text style = {{fontSize: 30,color:"blue",fontWeight: "bold"}}
       >Login App</Text>
 

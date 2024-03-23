@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import React, { useState } from 'react';
 
-import chessBoard from './chessBoard/chessBoard';
+import ChessBoard from './chessBoard/chessBoard';
 
 export default function App() {
 
@@ -10,51 +10,54 @@ export default function App() {
   let [password, setPassword] = useState("");
 
   return (
-    <View style={styles.container}>
+
+    <ChessBoard/>
+
+    // <View style={styles.container}>
 
       
-      <Text style = {{fontSize: 30,color:"blue",fontWeight: "bold"}}
-      >Login App</Text>
+    //   {/* <Text style = {{fontSize: 30,color:"blue",fontWeight: "bold"}}
+    //   >Login App</Text>
 
-      <TextInput
-        style={styles.input}
-        keyboardType= "default"
-        placeholder='Enter Username Here'
-        placeholderTextColor="black"
-        onChangeText={(text) => {
-          setUsername(text)
-        }}
-        value={username}
-      />
+    //   <TextInput
+    //     style={styles.input}
+    //     keyboardType= "default"
+    //     placeholder='Enter Username Here'
+    //     placeholderTextColor="black"
+    //     onChangeText={(text) => {
+    //       setUsername(text)
+    //     }}
+    //     value={username}
+    //   />
       
-      <TextInput
-        style={styles.input}
-        keyboardType= "visible-password"
-        placeholder='Enter Password Here'
-        placeholderTextColor="black"
-        onChangeText={(text) => {
-          setPassword(text)
-        }}
-        value={password}
-      />
+    //   <TextInput
+    //     style={styles.input}
+    //     keyboardType= "visible-password"
+    //     placeholder='Enter Password Here'
+    //     placeholderTextColor="black"
+    //     onChangeText={(text) => {
+    //       setPassword(text)
+    //     }}
+    //     value={password}
+    //   />
 
-      <Button
-        color="green"
-        title='Submit Now'
-        onPress={() => {
-          if(username == "cspeople" & password == "computerscience"){
-            alert("Login Successful !!! Great");
-          }
-          else{
-            alert("WARNING : Username Or Password Incorrect !!")
-          }
+    //   <Button
+    //     color="green"
+    //     title='Submit Now'
+    //     onPress={() => {
+    //       if(username == "cspeople" & password == "computerscience"){
+    //         alert("Login Successful !!! Great");
+    //       }
+    //       else{
+    //         alert("WARNING : Username Or Password Incorrect !!")
+    //       }
 
-        }}
-      />
+    //     }}
+    //   /> */}
 
 
-      <StatusBar style="auto" />
-    </View>
+    //   <StatusBar style="auto" />
+    // </View>
   );
 }
 

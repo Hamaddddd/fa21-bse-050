@@ -2,10 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { StyleSheet,TextInput, Text, View } from 'react-native';
 
-function DiscountCalculator(){
+function StudentRecord(){
+
     let [price,setPrice] = useState();
     let [discount,setDiscount] = useState();
+
     return(
+        
+    
         <View style = {styles.container}>
             <TextInput
             style={styles.input}
@@ -36,10 +40,8 @@ function DiscountCalculator(){
 
 
         </View>
-    );
+    )
 }
-
-
 
 const styles = StyleSheet.create({
     container: {
@@ -58,4 +60,4 @@ const styles = StyleSheet.create({
     },
   });
 
-  export default DiscountCalculator;
+  export default StudentRecord;

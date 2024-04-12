@@ -10,8 +10,8 @@ export default function App() {
      
 
      <View>
-      {/* <ChatScreen></ChatScreen> */}
-      <StatusScreen></StatusScreen>
+      <ChatScreen></ChatScreen>
+      {/* <StatusScreen></StatusScreen> */}
       
 
      </View>

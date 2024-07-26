@@ -120,7 +120,7 @@ function oneLess(val){
 arr1.map(oneLess);
 
 //Filter
-
+arr100 = [1,2,3,4,5,6,6,0];
 function existanceCheck(x){
     if(x == 6){
         return true;
@@ -128,7 +128,7 @@ function existanceCheck(x){
     else{return false;}
 }
 
-arr1.filter(existanceCheck);
+console.log(arr100.filter(existanceCheck));
 
 //Reduce
 
@@ -140,7 +140,11 @@ console.log("Reduced val : "+arr1.reduce(sumCalculate ));
 
 //reduce can also have an initial argument to start with
 
-console.log("Reduced val : "+arr1.reduce(sumCalculate , 199));
+function sumCalculatenew(x,y){
+    return x+y;
+}
+arr101 =[1,2,3];
+console.log("Reduced val : "+arr101.reduce(sumCalculatenew , 199));
 
 //--the end
 

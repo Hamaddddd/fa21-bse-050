@@ -104,6 +104,17 @@ let n3 = str_1.match("Ahmed");
 console.log("Match "+n3);
 
 
+//mid past paper question using startswith and endswith
+
+function isFullName(fullName,firstName,lastName){
+    if (fullName.startsWith(firstName) & fullName.endsWith(lastName)){
+        return true;
+    }
+    else return false;
+}
+
+console.log(isFullName("Hamad 1234 Ahmed","Hamad","Ahmed"));
+
 
 
 

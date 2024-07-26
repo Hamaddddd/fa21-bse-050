@@ -63,6 +63,11 @@ console.log("Sum is: "+numbs.reduce(sumIt2,1000));
 //reduce calculate mean
 var total,mean;
 const meanCalculate = x => {
-    total += x;
+    for(index =0; index<numbs.length;i++){
+        total += x;
+    }
     mean = total/numbs.length;
+    return mean;
 };
+
+console.log("Mean of Numbs Arr is :"+numbs.reduce(meanCalculate))

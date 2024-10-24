@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: node:14
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    volumes:
+    - ./frontend:/app
+    command: >
+      sh -c "npm install &&
+            npm run build &&
+            npm install -g serve &&
+            serve -s build -l 3000"
+    depends_on:
+      - backend   
+    environment:
+      - REACT_APP_API_URL=http://backend:5000  # Environment variable for backend communication
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/mydatabase  # DB connection URL
+    depends_on:
+      - db       # Ensures DB is up before backend
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql  # Optional init script for DB
+
+volumes:
+  postgres_data:
+    driver: local
